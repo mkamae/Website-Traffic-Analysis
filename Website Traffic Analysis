@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data into a pandas dataframe
+data = pd.read_csv('website_traffic.csv')
+
+# Calculate the most popular pages and traffic sources
+popular_pages = data['page'].value_counts().head()
+traffic_sources = data['source'].value_counts()
+
+# Plot the most popular pages and traffic sources
+plt.bar(popular_pages.index, popular_pages.values)
+plt.xlabel('Page')
+plt.ylabel('Views')
+plt.title
